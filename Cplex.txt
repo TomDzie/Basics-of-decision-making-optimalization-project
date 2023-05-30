@@ -1,0 +1,48 @@
+int n = 14;
+int opening = 8;
+int closing = 10;
+int time_range = (closing - opening) * 10;
+int tables = 4;
+
+range clients_range = 1..n;
+range time_range_set = 1..time_range;
+
+float clients[clients_range][1..3] = [[8, 8.5, 25],
+                                      [8.2, 9, 20],
+                                      [8, 8.3, 15],
+                                      [8, 9, 40],
+                                      [8.2, 9, 30],
+                                      [8.5, 9.3, 60],
+                                      [8.9, 9.4, 20],
+                                      [9, 9.5, 20],
+                                      [8.5, 9.3, 30],
+                                      [9, 9.3, 10],
+                                      [9.5, 9.9, 40],
+                                      [8, 9.9, 50],
+                                      [8.8, 9.4, 25],
+                                      [9, 9.5, 20]];
+
+int time[clients_range][time_range_set];
+
+execute {
+  for(var i=1; i <= 14; i++){
+    var start = (clients[i][1]-opening)*10 + 1;
+    var end = (clients[i][2]-opening)*10;
+    for(var j=1; j <= end; j++){
+      time[i][j];
+      if(j>= start) time[i][j] = 1;      
+    }
+  }
+}
+
+dvar int earings;
+dvar boolean chosen[1..n];
+maximize earings;
+
+
+subject to {
+  //maks zarobki
+  sum(j in 1..n)(chosen[j]*clients[j][3]) >= earings;
+  
+  //nie więcej niż 4 stoliki na raz
+  forall(i in 1..time_range)sum(j in 1..n)(time[j][i]*chosen[j]) <=tables;    
