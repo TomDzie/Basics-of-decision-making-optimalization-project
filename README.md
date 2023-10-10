@@ -19,4 +19,4 @@ time(n x time_range) = {1 if client occupies table in current unit of time, 0 if
 earings – total profit
 chosen(n x 1) = {
 
-\[ \sum_{n=1}^{chosen} \binom{n \cdot clients_n}{3} \geq earnings \]
+$\[ \sum_{n=1}^{chosen} \binom{n \cdot clients_n}{3} \geq earnings \]
