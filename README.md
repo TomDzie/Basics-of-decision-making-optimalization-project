@@ -14,5 +14,5 @@ tables - number of tables
 opening - opening hour  
 closing - closing hour  
 time_range = (closing-opening) * 10  
-clients__n,3 = [[entered, left, money spend] ... n]
+clientsn,3 = [[entered, left, money spend] ... n]
 time__n,time_range = {1 if client occupies table in current unit of time, 0 if not
