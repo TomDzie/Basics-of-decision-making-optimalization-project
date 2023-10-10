@@ -9,9 +9,9 @@ To solve this optimization problem I took two approaches,
 metaheuristic: tabu search in Python and IBM CPlex OPL implementation, but first, math.
 [!IMPORTANT]
 - Parameters:  
-  n - number of clients  
-  tables - number of tables  
-  opening - opening hour  
-  closing - closing hour  
-  time_range = $$(closing-opening) * 10  
+n - number of clients  
+tables - number of tables  
+opening - opening hour  
+closing - closing hour  
+time_range = $$(closing-opening) * 10  
   
