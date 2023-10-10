@@ -13,13 +13,12 @@ tables - number of tables
 opening - opening hour  
 closing - closing hour  
 time_range = (closing-opening) * 10  
-clients(n x 3) = [[entered, left, money spend] ... n]
-time(n x time_range) = {1 if client occupies table in current unit of time, 0 if not
-- Decision variables
-earings – total profit
-chosen(n x 1) = {1 if client is chosen, 0 if not
-- objective function:
-  argmax{earings}
--Ograniczenia:
-
-$\[ \sum_{n=1}^{chosen} \binom{n \cdot clients_n}{3} \geq earnings \]$
+clients(n x 3) = [[entered, left, money spend] ... n]  
+time(n x time_range) = {1 if client occupies table in current unit of time, 0 if not  
+- Decision variables  
+earings – total profit  
+chosen(n x 1) = {1 if client is chosen, 0 if not  
+- objective function:  
+argmax{earings}  
+-Ograniczenia:  
+$\[\sum_{n=1}^{chosen} \binom{n \cdot clients_n}{3} \geq earnings \]$
