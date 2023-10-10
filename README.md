@@ -20,7 +20,8 @@ earings – total profit
 chosen(n x 1) = {1 if client is chosen, 0 if not  
 - objective function:  
 argmax{earings}  
--Ograniczenia:  
-$\sum_{1}^{n}\left ( chosen_{n} * clients_{n,3}  \right ) \geq earings$  
-
-$\sum_{1}^{n}\left ( time_{n,time range} * chosen_{n} \right ) \leq tables, \forall time_{range}$
+- Ograniczenia:
+Maximize profit
+$\sum_{1}^{n}\left( chosen_{n} * clients_{n,3}  \right ) \geq earings$
+Maximum as many customers at one time as all tables:
+$\sum_{1}^{n}\left( time_{n,time range} * chosen_{n} \right ) \leq tables, \forall time_{range}$
