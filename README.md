@@ -6,13 +6,17 @@ The next day, only selected customers can appear, and they are selected so as to
 maximize the restaurant's profit but number of reservations can't exceed the number of tables.
 ## Approach to problem
 To solve this optimization problem I took two approaches,
-metaheuristic: tabu search in Python and IBM CPlex OPL implementation, but first, math.
-[!IMPORTANT]
+metaheuristic: tabu search in Python and IBM CPlex OPL implementation, but first, math.  
 - Parameters:  
 n - number of clients  
 tables - number of tables  
 opening - opening hour  
 closing - closing hour  
 time_range = (closing-opening) * 10  
-clientsn,3 = [[entered, left, money spend] ... n]
-time__n,time_range = {1 if client occupies table in current unit of time, 0 if not
+clients(n x 3) = [[entered, left, money spend] ... n]
+time(n x time_range) = {1 if client occupies table in current unit of time, 0 if not
+- Decision variables
+earings – total profit
+chosen(n x 1) = {
+
+\[ \sum_{n=1}^{chosen} \binom{n \cdot clients_n}{3} \geq earnings \]
