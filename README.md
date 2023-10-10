@@ -21,4 +21,4 @@ chosen(n x 1) = {1 if client is chosen, 0 if not
 - objective function:  
 argmax{earings}  
 -Ograniczenia:  
-$\[\sum_{n=1}^{chosen} \binom{n \cdot clients_n}{3} \geq earnings \]$
+$\[\sum_{n=1}^chosen \binom{n \cdot clients_n}{3} \geq earnings \]$
