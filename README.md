@@ -56,4 +56,8 @@ Introduce diversification mechanisms to explore different regions of the search 
 8. Termination Criteria:  
 Check if termination criteria are met. This could include a maximum number of iterations, a satisfactory solution, or a time limit.  
 9. Iterate:  
-Repeat steps 2-8 until the termination criteria are met.  
+Repeat steps 2-8 until the termination criteria are met.
+
+## Conclusion
+Implemented tabu search metaheuristic always returns solution very close to the optimal one, but rarely exactly optimal,
+or possibly requires hundreds of iterations to achieve it. Solver, on the other hand, checks all possible combinations and always returns the optimal solution.
