@@ -25,8 +25,10 @@ Maximize profit
 $\sum_{1}^{n}\left( chosen_{n} * clients_{n,3}  \right ) \geq earings$  
 Maximum as many customers at one time as all tables:  
 $\sum_{1}^{n}\left( time_{n,time range} * chosen_{n} \right ) \leq tables, \forall time_{range}$
+
 ## CPLEX OPL implementation 
 In Cplex everything stays simple, just rewrite math to code. As simple as that
+
 ## Heurestic algorithm implementation
 The basic idea of Tabu Search is to penalize moves that take the solution into previously visited search
 spaces (also known as tabu). Tabu Search, however, does deterministically accept non-improving solutions in order to prevent getting stuck in local minimums.  
